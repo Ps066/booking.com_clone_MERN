@@ -3,6 +3,8 @@ import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { DateRange } from 'react-date-range';
 import { useState } from 'react';
+import { addYears } from 'date-fns';
+
 
 // css files
 import 'react-date-range/dist/styles.css'; // main css file
@@ -13,8 +15,8 @@ const Header = () => {
         {
           startDate: new Date(),
           endDate: null,
-          key: 'selection'
-        }
+          key: 'selection',
+        },
       ]);
 
   return (
@@ -60,10 +62,11 @@ const Header = () => {
                     <FontAwesomeIcon icon={faCalendarDays}  className='headerIcons' />
                     <span className="headerSearchText">date to date</span>
                     <DateRange
-                        editableDateInputs={true}
-                        onChange={item => setDate([item.selection])}
-                        moveRangeOnFirstSelection={false}
-                        ranges={date}
+                    editableDateInputs={true}
+                    onChange={(item) => setDate([item.selection])}
+                    moveRangeOnFirstSelection={false}
+                    ranges={date}
+                    className="date"
                     />
                 </div>
                 <div className="headerSearchItem">
