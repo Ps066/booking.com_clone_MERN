@@ -76,13 +76,14 @@
 }
 
 .headerSearchText{
-    color: lightgray;
+    color: rgb(104 104 104);
     cursor: pointer;
 }
 
 .date{
     position: absolute;
     top:50px;
+    z-index: 2;
 }
 
 .options{
@@ -94,7 +95,7 @@
     -webkit-box-shadow: -1px 12px 51px -8px rgba(0,0,0,0.33);
     -moz-box-shadow: -1px 12px 51px -8px rgba(0,0,0,0.33);
     box-shadow: -1px 12px 51px -8px rgba(0,0,0,0.33);
-
+    z-index: 2;
 }
 
 .optionsItem{
